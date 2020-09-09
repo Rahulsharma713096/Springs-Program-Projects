@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean name="b1" class="com.rahul.Bean.HelloBean">
+<property name="name" value=" RSjald" />
+<property name="age" value="22" />
+</bean>
+<alias name="b2" value="b1"/>
+<alias name="b3" value="b2"/>
+</beans>
+		
