@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="accountclas" class="com.rahul.bean.Account">
+		<!-- collaborators and configuration for this bean go here -->
+		<property name="accNo" value="abc10" />
+		<property name="accName" value="RAHUL" />
+		<property name="accType" value="savings" />
+		<property name="balance" value="100" />
+
+	</bean>
+
+	<bean id="employee" class="com.rahul.bean.Employee">
+		<!-- collaborators and configuration for this bean go here -->
+		<property name="eid" value="IND10" />
+		<property name="ename" value="RAHUL" />
+		<property name="eaddress" value="Jammu" />
+
+		<!-- Setting property through Setter Injection(Injecting the DEPANDENT 
+			bean id -->
+			
+		<property name="account">
+			<ref bean="accountclas" />
+		</property>
+
+		<!--we can use like taht also: <property name="account" ref='account' />-->
+
+	</bean>
+
+	<!-- more bean definitions go here -->
+
+</beans>

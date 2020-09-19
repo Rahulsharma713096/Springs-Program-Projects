@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+     <bean id="cp" class="bean.Course">  
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="id" value="UC1"/>
+        <property name="cname" value="Java And Testing"/>
+        <property name="cost" value="25000"/>
+    </bean>
+    <bean id="sp" class="bean.Student">  
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="sid" value="026"/>
+        <property name="sname" value="RAHUL"/>
+        <property name="age" value="23"/>
+        <property name="course" ref="cp"/>
+       
+    </bean>
+
+</beans>
