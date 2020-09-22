@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Bean configuration through c-name-space -->
+
+	<bean id='account' class='com.rahul.beans.Account' c:accNo='01234567890'
+		c:accType='savings' c:accName='RAHUL' c:balance="1200" />
+
+
+	<bean id='employee' class='com.rahul.beans.Employee' c:eid="123ab123ab"
+		c:ename="RAHUL SHARMA" c:companyName="AKLC" c:account-ref='account' />
+
+</beans>
